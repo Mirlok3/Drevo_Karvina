@@ -13,21 +13,26 @@
     </head>
     <body>
         <header class="primary-header bg-primary">
-            <div class="container">
+            <div class="container barva">
                 <nav class="primary-nav" id="navigation">
-                    <div class="logo-container">
-                        <a href="#">
-                            <img class="my-auto logo" src="./imgs/drevologo-removebg.png" alt="">
-                            <span class="my-auto fs-l text-white">Dřevo Karviná</span>
-                        </a>
+                    <div class="nav-main">
+                        <div>
+                            <a href="#" class="logo-container">
+                                <img class="my-auto logo" src="./imgs/drevologo-removebg.png" alt="">
+                                <h2 class="my-auto fs-l text-white">Dřevo Karviná</h2>
+                            </a>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="hamburger-input" class="burger-shower" />
+                            <label id="hamburger-menu" for="hamburger-input" class=" text-white">
+                                <i class="fa fa-bars"></i>
+                            </label>
+                        </div>
                     </div>
 
-                    <input type="checkbox" id="hamburger-input" class="burger-shower" />
-                    <label id="hamburger-menu" for="hamburger-input" class=" text-white">
-                        <i class="fa fa-bars"></i>
-                    </label>
 
-                    <ul role="list" class="nav-list my-auto fs-s">
+                    <ul role="list" class="nav-list my-auto fs-s" id="nav-list">
                         <li><a href="#">O nás</a></li>
                         <li><a href="#">Ceník</a></li>
                         <li><a href="#">Galerie</a></li>
@@ -37,48 +42,83 @@
         </header>
 
         <main>
-            <section>
-                <div class="container">
+            <article>
+                <div class="hero-container">
                     <div class="hero">
-                        <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="hero-image">
+                        <!-- <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="hero-image"> -->
+                        <h2>coje</h2>
                         <p class="hero-text text-neutral-900">
                             Jsme firma Palivové dřevo Karviná, která se zabývá: Zpracováním dřeva - řezání, sušení a další zpracování dřeva pro různé účely, včetně stavebních projektů
                         </p>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <section> <!-- TODO: -->
-                <p class="text-accent-400 fs-xl text-center">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#291a0d" fill-opacity="1" d="M0,256L0,192L360,192L360,224L720,224L720,192L1080,192L1080,224L1440,224L1440,0L1080,0L1080,0L720,0L720,0L360,0L360,0L0,0L0,0Z"></path></svg> -->
+
+            <section>
+                <h2 class="text-primary fs-l text-center">
                     Naše Produkty
-                </p>
+                </h2>
                 <div class="container">
-                    <div class="even-columns">
-                        <div>Coje</div>
-                        <div>Coje</div>
-                        <div>Coje</div>
+                    <div class="grid">
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky tvrdé</h2>
+                            </span>
+                            <p>1700kc/ sprm</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky měkké</h2>
+                            </span>
+                            <p>1100kc/ sprm</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky bříza</h2>
+                            </span>
+                            <p>1700kc/ sprm</p>
+                        </div>
                     </div>
-                    <div class="even-columns">
-                        <div>Coje</div>
-                        <div>Coje</div>
-                        <div>Coje</div>
-                    </div>
-                    <div class="even-columns">
-                        <div>Coje</div>
-                        <div>Coje</div>
-                        <div>Coje</div>
+
+                    <h2 class="text-primary fs-l text-center">Štípané skládané metrovky</h2>
+                    <div class="grid">
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky tvrdé</h2>
+                            </span>
+                            <p>1700kc/ sprm</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky měkké</h2>
+                            </span>
+                            <p>1100kc/ sprm</p>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="./imgs/pexels-lukas-296333.jpg" alt="drevo" class="card-image">
+                                <h2 class="fs-m">Špalky bříza</h2>
+                            </span>
+                            <p>1700kc/ sprm</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+
         <script>
             var hamburgerMenu = document.getElementById('hamburger-menu');
-            var navigation= document.getElementById('navigation');
+            var navlist = document.getElementById('nav-list');
 
-            // TODO: BUG! when refreshing the page with hamburger active, the primary-nav doesnt lose the class!
             hamburgerMenu.addEventListener('click', function() {
-                // Toggle the column-direction class
-                navigation.classList.toggle('column-direction');
+                navlist.classList.toggle('responsive');
             });
         </script>
     </body>
